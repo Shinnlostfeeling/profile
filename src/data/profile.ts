@@ -44,6 +44,8 @@ export interface Experiment {
   status: ExperimentStatus;
   description: string;
   image?: string;
+  url?: string;
+  urlLabel?: string;
 }
 
 export interface Hobby {
@@ -151,10 +153,12 @@ export const profile: Profile = {
     {
       id: "exp-3",
       title: "PulseWeather — Forecast Dashboard",
-      status: "archived",
+      status: "active",
       description:
         "Real-time weather and air quality interface with hourly temperature charts and saved city switcher.",
       image: "projects/pulseweather.png",
+      url: "https://pulse-weather-chi.vercel.app/",
+      urlLabel: "Live Demo",
     },
   ],
 

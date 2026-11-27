@@ -2,14 +2,6 @@ import { profile } from "../../data/profile";
 import { Reveal } from "../ui/Reveal";
 import { getStaggerDelay } from "../../lib/motion";
 
-interface ExperimentEntry {
-  id: string;
-  title: string;
-  status: string;
-  description: string;
-  image?: string;
-}
-
 function resolvePublicPath(path?: string): string {
   if (!path) return "";
   if (/^(https?:\/\/|data:|blob:)/i.test(path)) return path;
@@ -18,7 +10,7 @@ function resolvePublicPath(path?: string): string {
 }
 
 export function Experiments() {
-  const experiments = profile.experiments as ExperimentEntry[];
+  const { experiments } = profile;
 
   return (
     <section id="experiments" className="section-block">
@@ -35,6 +27,8 @@ export function Experiments() {
         <div className="experiments-grid">
           {experiments.map((item, index) => {
             const imageSrc = resolvePublicPath(item.image);
+            const targetUrl = item.url?.trim();
+            const isExternal = targetUrl ? /^https?:\/\//i.test(targetUrl) : false;
 
             return (
               <Reveal
@@ -63,6 +57,17 @@ export function Experiments() {
                       <span className="experiment-status">{item.status}</span>
                     </div>
                     <p className="experiment-desc">{item.description}</p>
+                    {targetUrl && (
+                      <a
+                        href={targetUrl}
+                        target={isExternal ? "_blank" : undefined}
+                        rel={isExternal ? "noopener noreferrer" : undefined}
+                        className="highlight-link"
+                      >
+                        <span>{item.urlLabel || "Open Live"}</span>
+                        <span aria-hidden="true">↗</span>
+                      </a>
+                    )}
                   </div>
                 </article>
               </Reveal>

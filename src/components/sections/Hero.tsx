@@ -70,7 +70,7 @@ function SocialIcon({ platform }: { platform: SocialPlatform }) {
   }
 }
 
-const RESTRICTED_MESSAGE = "F12 if u wanna see it without Blur.";
+const RESTRICTED_MESSAGE = "Theres a way u can see this photo without blur.";
 
 function HoverBlurMessageOverlay({ active }: { active: boolean }) {
   if (typeof document === "undefined") return null;

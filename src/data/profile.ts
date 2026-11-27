@@ -155,7 +155,7 @@ export const profile: Profile = {
       title: "PulseWeather — Forecast Dashboard",
       status: "active",
       description:
-        "Real-time weather and air quality interface with hourly temperature charts and saved city switcher.",
+        "Independently designed and developed in React with Open-Meteo integration, hourly temperature tooltips, and US AQI monitoring (private source).",
       image: "projects/pulseweather.png",
       url: "https://pulse-weather-chi.vercel.app/",
       urlLabel: "Live Demo",

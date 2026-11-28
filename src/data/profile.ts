@@ -118,7 +118,7 @@ export const profile: Profile = {
 
   skills: [
     { name: "React", category: "frontend", level: "advanced", note: "Interactive UI & components" },
-    { name: "TypeScript", category: "frontend", level: "intermediate", note: "Typed state & data models" },
+    { name: "TypeScript", category: "frontend", level: "advanced", note: "Typed state & data models" },
     { name: "JavaScript", category: "frontend", level: "intermediate", note: "DOM & UI interactions" },
     { name: "HTML & CSS", category: "frontend", level: "intermediate", note: "Responsive layouts & themes" },
     { name: "CSS & Motion", category: "frontend", level: "intermediate", note: "Transitions & subtle motion" },
@@ -155,10 +155,10 @@ export const profile: Profile = {
       title: "PulseWeather — Forecast Dashboard",
       status: "active",
       description:
-        "Independently designed and developed in React with Open-Meteo integration, hourly temperature tooltips, and US AQI monitoring (private source).",
+        "Independently designed and developed in React with Open-Meteo integration, hourly temperature tooltips, and US AQI monitoring.",
       image: "projects/pulseweather.png",
       url: "https://pulse-weather-chi.vercel.app/",
-      urlLabel: "Live Demo",
+      urlLabel: "Live",
     },
   ],
 
